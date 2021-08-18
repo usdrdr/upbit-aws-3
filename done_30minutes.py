@@ -95,14 +95,14 @@ while(True) :
             
 
         elif Buy_coin[i] == True and Sell_coin[i] == False :
-            if (MACD_oscillator_1 > MACD_oscillator_2 and now_Slow_K > now_Slow_D and now_Slow_K < 80) :
+            if (MACD_oscillator_1 > MACD_oscillator_2 >  MACD_oscillator_3 and now_Slow_K > now_Slow_D and now_Slow_K < 80) :
                 buy(coinlist[i])
                 Buy_coin[i] = False
                 Sell_coin[i] = True
                 print(coinlist[i], ": BUY")
                 print()
 
-            elif (MACD_oscillator_1 > MACD_oscillator_2 and now_Slow_K > now_Slow_D and now_Slow_K > 80) :
+            elif (MACD_oscillator_1 > MACD_oscillator_2 >  MACD_oscillator_3 and now_Slow_K > now_Slow_D and now_Slow_K > 80) :
                 Buy_coin[i] = False
                 print(coinlist[i], ": BUY_HOLD_OFF")
                 print()
